@@ -11,22 +11,16 @@ import org.omnifaces.cdi.Param;
 
 @Named
 @ViewScoped
-public class ComunicacaoTeste2Bean implements Serializable {
+public class ComunicacaoResultadoBean implements Serializable {
 
 	private static final long serialVersionUID = -1176416112675157165L;
 
-	@Inject @Param(name = "nome")
+
 	private String nome;
-	@Inject @Param(name = "sobrenome")
 	private String sobrenome;
 	
-	
-	@PostConstruct
-	public void init() {
-		System.out.println("Criou comunicação 2");
-		//Map<String, String> paramsMap = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
-		//nome = paramsMap.get("nome");
-		//sobrenome = paramsMap.get("sobrenome");
+		public void init() {
+		System.out.println("Criou Comunicação Resultado");
 		System.out.println(nome);
 		System.out.println(sobrenome);
 	}
