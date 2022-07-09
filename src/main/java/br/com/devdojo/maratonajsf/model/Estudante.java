@@ -1,5 +1,6 @@
 package br.com.devdojo.maratonajsf.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -25,10 +26,9 @@ public class Estudante {
 	}
 
 
-	public static List<Estudante> estudanteList(){
-		return Arrays.asList(new Estudante("Ikki", "Fenix" , 10),
-				new Estudante("Shiryu", "Dragão" , 10),
-				new Estudante("Seiya", "Pegasus" , 10));
+	public static List<Estudante> estudanteList() {
+		return new ArrayList<>(Arrays.asList(new Estudante("Ikki", "Fenix", 10), new Estudante("Shiryu", "Dragão", 10),
+				new Estudante("Seiya", "Pegasus", 10)));
 	}
 
 	public Turno getTurno() {
